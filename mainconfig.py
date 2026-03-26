@@ -1,24 +1,23 @@
-BOT_TOKEN = "8747604848:AAHm9tKLuV07WgCToAPMvjeNqNRQTucAKUA"
+import os
+from dotenv import load_dotenv
 
-# ID Группы (Форум)
-SUPPORT_GROUP_ID = -1003712654520 
+load_dotenv()
 
-# Твой ID
-ADMIN_ID = 6923254118 
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-# --- КАНАЛ ПОДПИСКИ ---
-CHANNEL_USERNAME = "@interpolswat"
+SUPPORT_GROUP_ID = int(os.getenv("SUPPORT_GROUP_ID"))
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
-# Топики
-LOG_TOPIC_ID = 145 
-LOG_FILE_TOPIC_ID = 148 
-UNBAN_TOPIC_ID = 181 
-APPEAL_TOPIC_ID = 218  # Топик для заявок на разбан
+CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")
 
-# Верификация
-VERIFICATION_ACCOUNT = "@interpolmoderator" 
+LOG_TOPIC_ID = int(os.getenv("LOG_TOPIC_ID"))
+LOG_FILE_TOPIC_ID = int(os.getenv("LOG_FILE_TOPIC_ID"))
+UNBAN_TOPIC_ID = int(os.getenv("UNBAN_TOPIC_ID"))
+APPEAL_TOPIC_ID = int(os.getenv("APPEAL_TOPIC_ID"))
 
-CREATOR_LINK = "https://t.me/interpolswat"
+VERIFICATION_ACCOUNT = os.getenv("VERIFICATION_ACCOUNT")
+CREATOR_LINK = os.getenv("CREATOR_LINK")
+
 
 TEXT_WELCOME = "👋 Напишите ваш вопрос, чтобы начать диалог."
 TEXT_ALREADY_ACTIVE = "⚠️ У вас уже есть активный диалог."
